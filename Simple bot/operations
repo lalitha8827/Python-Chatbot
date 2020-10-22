@@ -1,0 +1,27 @@
+def Mathematical():
+    #displaying the possible mathematical operations
+    print("**Choose anyone from below**")
+    print("1.Addition")
+    print("2.Subtraction")
+    print("3.Multiplication")
+    print("4.Division")
+    print("5.Exponentiation")
+    print("6.Floor Division")
+    try:
+        return int(input("Enter ur choice in 1/2/3/4/5/6 : "))
+    except:
+        print("only enter in between 1-6")
+
+def Trignometric():
+    #displaying the trignometric operations
+    print("**Choose anyone from below**")
+    print("1.Sin()")
+    print("2.Cos()")
+    print("3.Tan()")
+    print("4.Cosec()")
+    print("5.Sec()")
+    print("6.Cot()")
+    try:
+        return int(input("Enter ur choice in 1/2/3/4/5/6 : "))
+    except:
+        print("Only enter in between 1-6")
