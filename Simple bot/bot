@@ -1,0 +1,60 @@
+import math
+from greeting import greet_and_introduce,welcome
+from menu import show_menu
+from operations import Mathematical,Trignometric
+def bot():
+    greet_and_introduce()
+    name=input("Your good name please ")
+    welcome(name)
+    #takes choice from show_menu() i.e operations
+    choice1=show_menu()
+    while(choice1!=3):
+        if(choice1==1):
+            #takes choice from mathematical operations
+            choice=Mathematical()
+            a=int(input("Enter the first number : "))
+            b=int(input("Enter the second number : "))
+            if (choice==1):
+                #adds two numbers
+                print("Addition of ",a," and ",b," is ",a+b)
+            elif(choice==2):
+                #subtracts two numbers
+                print("Subtraction of ",a," and ",b," is ",a-b)
+            elif(choice==3):
+                #multiplies two numbers
+                print("Multiplication of ",a," and ",b," is ",a*b)
+            elif(choice==4):
+                #divides two numbers and gives the result in float
+                print("Division of ",a," and ",b," is ",a/b)
+            elif(choice==5):
+                #power of one number with another number
+                print("Power of ",a," with respect to ",b," is ",a**b)
+            elif(choice==6):
+                #divides two numbers and gives the result in int
+                print("Floor Division of ",a," and ",b," is ",a//b)
+            #invalid choice
+            else:
+                print("Invalid Choice")
+        elif(choice1==2):
+            #takes choice from trignometric operations
+            choice=Trignometric()
+            a=int(input("Enter value : "))
+            if(choice==1):
+                print("Sin(",a,") = ",math.sin(a))
+            elif(choice==2):
+                print("Cos(",a,") = ",math.cos(a))
+            elif(choice==3):
+                print("Tan(",a,") = ",math.tan(a))
+            elif(choice==4):
+                print("Cosec(",a,") = ",1/math.sin(a))
+            elif(choice==5):
+                print("Sec(",a,") = ",1/math.cos(a))
+            elif(choice==6):
+                print("Cot(",a,") = ",math.tan(a))
+            #invalid choice
+            else:
+                print("Invalid Choice")
+        else:
+            print("Invalid Choice")
+        choice1=show_menu()
+bot()
