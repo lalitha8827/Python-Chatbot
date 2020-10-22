@@ -1,0 +1,33 @@
+import datetime
+import random
+
+#intro about the bot
+def greet_and_introduce():
+    resp=[
+        "Hi There!I am a chatbot.\n"
+        "I can help you do simple and easy mathematical calculations"
+    ]
+    #prints the above message
+    print(random.choice(resp))
+
+#welcoming messaging from the bot
+def welcome(name):
+    messages = [
+        "Nice to meet you!",
+        "I'm here to provide u the result of simple calculations"
+    ]
+    print(f"{get_timeofday_greeting()} {name}! {random.choice(messages)}")
+
+#welcoming message based on the time they have using the chatbot
+def get_timeofday_greeting():
+    curr_time=datetime.datetime.now()
+    timeofday_greeting="Good Morning"
+    if(curr_time.hour>3 and curr_time.hour<12):
+        timeofday_greeting="Good Morning"
+    if(curr_time.hour>=12 and curr_time.hour<17):
+        timeofday_greeting="Good Afternoon"
+    elif(curr_time.hour>=17 and curr_time.hour<22):
+        timeofday_greeting="Good Evening"
+    elif(curr_time.hour>22):
+        timeofday_greeting="Hi Thats late.Good Night meet u tommorow"
+    return timeofday_greeting
