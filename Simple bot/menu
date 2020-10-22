@@ -1,0 +1,9 @@
+#displays the possible opeartions or things done by the chatbot
+def show_menu():
+    print("1.Mathematical Operations")
+    print("2.Trignomatric operations")
+    print("3.Quit")
+    try:
+        return int(input("Enter your choice in 1/2/3 : "))
+    except:
+        print("only enter in between 1-3")
